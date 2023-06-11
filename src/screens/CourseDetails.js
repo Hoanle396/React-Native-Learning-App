@@ -9,7 +9,7 @@ const CourseDetails = ({ route, navigation }) => {
   const { id } = route.params
   useEffect(() => {
     loadData()
-  }, [])
+  })
   const loadData = () => {
     axiosInstance.get('/course/' + id)
       .then((response) => {

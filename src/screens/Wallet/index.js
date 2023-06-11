@@ -13,7 +13,7 @@ const WalletHome = ({ route, navigation }) => {
    const { money } = useSelector(selectUser)
    useEffect(() => {
       loadData()
-   }, [])
+   }, [money])
    const loadData = () => {
       setLoading(true)
       axiosInstance.get('/wallet/cash')

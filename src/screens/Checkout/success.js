@@ -1,9 +1,8 @@
-import { Box, Center, Heading } from 'native-base'
-import React, { useState } from 'react'
+import { Button, Center } from 'native-base'
+import React from 'react'
 import { Image, Text, View } from 'react-native'
 import success from '../../assets/checked.png'
-const Success = () => {
-   const [date, setDate] = useState(new Date())
+const Success = ({ navigation }) => {
    return (
       <View style={{
          flex: 1,
@@ -21,6 +20,9 @@ const Success = () => {
             <View style={{ marginTop: 150, alignItems: "center", justifyContent: "center" }} >
                <Text style={{ fontSize: 24, color: "#00ad34" }}>Checkout Successful</Text>
                <Text style={{ fontSize: 18, color: "#676767ff", marginTop: 20 }}>Thank you</Text>
+               <Button style={{ marginTop: 20 }} onPress={() => navigation.navigate("Home")} >
+                  <Text style={{ fontSize: 18, color: "#FFFFFF" }}>Go back</Text>
+               </Button>
             </View>
          </Center>
       </View>

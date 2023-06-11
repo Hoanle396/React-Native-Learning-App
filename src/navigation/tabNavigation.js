@@ -61,12 +61,3 @@ export function WalletScreen() {
     </Wallet.Navigator>
   )
 }
-
-// const Trend = createNativeStackNavigator();
-// export function TrendScreen() {
-//   return (
-//     <Trend.Navigator screenOptions={{headerShown: false}}>
-//     <Trend.Screen name="Trend" component={TrendHome}/>
-//     </Trend.Navigator>
-//   )
-// }

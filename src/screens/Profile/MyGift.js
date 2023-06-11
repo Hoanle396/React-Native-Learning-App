@@ -19,7 +19,7 @@ export default function MyGift({ route, navigation }) {
       .finally(async () => {
         setLoading(false)
       })
-  }, [])
+  })
 
   if (loading) {
     return <Loadding />

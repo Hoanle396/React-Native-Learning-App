@@ -1,7 +1,7 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeStackScreen, PersonScreen, TrendScreen, WalletScreen } from '../navigation/tabNavigation'
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+import { HomeStackScreen, PersonScreen, WalletScreen } from '../navigation/tabNavigation';
 const Tab = createBottomTabNavigator();
 
 export default function HomeTab() {
@@ -12,9 +12,6 @@ export default function HomeTab() {
 
         if (route.name === 'Home') {
           iconName = 'home'
-
-          // } else if (route.name === 'Trend') {
-          //   iconName = 'fire';
         }
         else if (route.name === 'Person') {
           iconName = 'user';

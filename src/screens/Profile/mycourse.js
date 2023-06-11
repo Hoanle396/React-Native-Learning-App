@@ -9,7 +9,6 @@ import { selectUser } from '../../redux/auth'
 import { useSelector } from 'react-redux'
 export default function Mycourse({ route, navigation }) {
 
-
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const { firstName: firstname, lastName: lastname, avatarUrl: avt } = useSelector(selectUser)
@@ -22,7 +21,7 @@ export default function Mycourse({ route, navigation }) {
       .catch(error => {
         Alert.alert(error.message)
       })
-  }, [])
+  })
   if (loading) {
     return <Loadding />
   }
