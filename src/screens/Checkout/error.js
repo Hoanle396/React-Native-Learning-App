@@ -1,9 +1,8 @@
-import { Box, Center, Heading } from 'native-base'
-import React, { useState } from 'react'
+import { Button, Center } from 'native-base'
+import React from 'react'
 import { Image, Text, View } from 'react-native'
 import error from '../../assets/x-button.png'
-const Error = () => {
-   const [date, setDate] = useState(new Date())
+const Error = ({ navigation }) => {
    return (
       <View style={{
          flex: 1,
@@ -21,6 +20,9 @@ const Error = () => {
             <View style={{ marginTop: 150, alignItems: "center", justifyContent: "center" }} >
                <Text style={{ fontSize: 24, color: "#FF0000" }}>Checkout Failed</Text>
                <Text style={{ fontSize: 18, color: "#676767ff", marginTop: 20 }}>Please try again later</Text>
+               <Button style={{ marginTop: 20 }} onPress={() => navigation.navigate("Home")} >
+                  <Text style={{ fontSize: 18, color: "#FFFFFF" }}>Go back</Text>
+               </Button>
             </View>
          </Center>
       </View>
