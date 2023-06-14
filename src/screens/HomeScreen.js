@@ -68,7 +68,7 @@ export const HomeScreen = (props) => {
   }
   const handleChange = () => {
     if (search) {
-      axiosInstance.get('/course/search/' + search)
+      axiosInstance.get('/course/search/' + search.trim())
         .then((response) => {
           setRow(response.data)
         })
