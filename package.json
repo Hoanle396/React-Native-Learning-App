@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "expo start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint . --fix",
+    "format": "prettier --write \"src/**/*{.js,.jsx}\"",
+    "format:check": "prettier -c \"src/**/*{.js,.jsx}\""
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
@@ -68,6 +70,7 @@
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
     "metro-react-native-babel-preset": "^0.70.3",
+    "prettier": "^2.8.8",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
