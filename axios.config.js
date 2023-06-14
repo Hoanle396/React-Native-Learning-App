@@ -2,7 +2,7 @@ import * as axios from "axios";
 import * as SecureStore from 'expo-secure-store';
 
 let axiosInstance = axios.create({
-  baseURL: 'http://192.168.1.12:3000/api',
+  baseURL: 'http://192.168.112.244:3000/api',
 });
 axiosInstance.interceptors.request.use(
   async config => {
@@ -20,7 +20,7 @@ axiosInstance.interceptors.request.use(
 export default axiosInstance;
 
 let chatAPI = axios.create({
-  baseURL: 'http://192.168.1.12:5000/api',
+  baseURL: 'http://192.168.112.244:5000/api',
 });
 chatAPI.interceptors.request.use(
   async config => config,
